@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/*itens do menu*/
+nav#menu a#menu_contato{
+    color: rgba(0,0,0,.85);
+    transition: color 0.3s;
+}
+nav#menu li:hover a#menu_contato{
+    color: rgb(255,255,255);
+}
+/*H's*/
+div#interface h1{
+    font-family: ChampagneLimo;
+    font-size: 30pt;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    position: relative;
+    top:-3px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    width: 100%;
+    color: white;
+    background-color: #3b859b;
+}
+/*corpo principal*/
+div#msg_enviada{
+    width: 45%;
+    margin: 0px auto 0px auto;
+}
+div#msg_enviada span#mensagem_enviada{
+    font-family: 'Roboto Condensed';
+    margin: 40px auto 0px auto;
+    text-align: center;
+	font-weight: bold;
+    font-size: 19pt;
+    display: block;
+    color: #18a615;
+}
+p#texto_obrigado{
+    font-size: 18pt;
+    font-family: ChampagneLimo;
+    margin: 40px auto 40px auto;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 80%;
+}
+section#corpo_principal a#voltar{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 15pt;
+    font-family: 'Source Sans Pro';
+    color: white;
+    left: 44%;
+    right: 56%;
+    background-color: #3b859b;
+    padding: 8px;
+    box-shadow: 0px 0px 2px black;
+    transition: background-color 0.5s;
+}
+section#corpo_principal a#voltar:hover{
+    background-color: #3eb5b7;
+}
+
+/*Formumário*/
+div#form_contato {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 50%;
+    float: left;
+}
+form{
+    width: 60%;
+    border: 1px solid rgba(0,0,0,.45);
+    padding: 20px;   
+    margin-left: 145px;
+    margin-top: 25px;
+    background-color: rgba(0,0,0,.05);
+}
+div#form_contato label{
+    font-family: 'Roboto Condensed';
+    font-size: 13pt;
+    width: 100%;
+}
+input, textArea, button{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+textArea {
+    resize: none;
+    height: 250px;
+}
+
+button {
+    margin-bottom: 0px;
+    background-color: #3b859b;
+    color: white;
+    font-size: 15pt;
+    font-family: 'Roboto Condensed';
+    border: none; 
+    transition: background-color 0.5s;
+}
+button:hover {
+    background-color: #3eb5b7;
+    cursor: pointer;
+}
+/*Erros PHP*/
+div#form_contato span#erro {
+    padding: 8px;
+    background-color: #fc5050;
+    box-shadow: 0px 0px 3px;
+    font-size: 18pt;
+    font-family: 'Roboto Condensed';
+    margin-left: 146px;
+    color: black;
+}
+/*minha foto e a descrição*/
+aside#antoniom {
+    width: 49%;
+    float: right;
+    margin-top: 45px;
+}
+aside#antoniom img#antoniom{
+    display: block;
+    width: 45%;
+    position: relative;
+    left:130px;
+    box-shadow: 1px 1px 4px;
+}
+aside#antoniom img#texto_antonio {
+    width: 45%;
+    position: relative;
+    left:129px;
+}
+p.descricao_antonio {
+    font-size: 16pt;
+    font-family: ChampagneLimo;
+    text-align: justify;
+    width: 75%;
+    text-indent: 30px;
+    margin: 0px auto 0px 45px;
+}

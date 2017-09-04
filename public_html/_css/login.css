@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/*item do menu*/
+ul#login_cadastro li#login  {
+    box-shadow: 0px 0px 3px;
+    background-color: #3b859b;
+}
+ul#login_cadastro li#login a{
+    color: white;
+}
+/*H's*/
+div#interface h1{
+    font-family: ChampagneLimo;
+    font-size: 30pt;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    position: relative;
+    top:-3px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    width: 100%;
+    color: white;
+    background-color: #3b859b;
+}
+/*Erros PHP*/
+span#erro {
+    padding: 8px;
+    background-color: #fc5050;
+    box-shadow: 0px 0px 3px;
+    font-size: 18pt;
+    font-family: 'Roboto Condensed';
+    margin-left:365px;
+    top:20px;
+    position: relative;
+    color: black;
+}
+/*Formatação do Form*/
+form{
+    background-color: rgba(0,0,0,.06);
+    width: 30%;
+    border: 1px solid rgba(0,0,0,.45);
+    padding: 20px;
+    margin: 45px auto 0px auto;
+}
+form label{
+    font-family: 'Roboto Condensed';
+    font-size: 13pt;
+    width: 100%;
+}
+input, button{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+form button{
+    font-size: 15pt;
+    font-family: 'Roboto Condensed';
+    color: white;
+    background-color: #3b859b;
+    border: none;
+    margin-bottom: 0px;
+    transition: background-color 0.5s;
+}
+form button:hover{
+    background-color: #3eb5b7;
+    cursor: pointer;
+}

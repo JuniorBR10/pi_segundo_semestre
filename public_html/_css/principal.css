@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@font-face {font-family:"ChampagneLimo";src:url("Champagne__amp__Limousines/Champagne_Limousines.eot?") format("eot"),url("Champagne__amp__Limousines/Champagne_Limousines.woff") format("woff"),url("Champagne__amp__Limousines/Champagne_Limousines.ttf") format("truetype"),url("Champagne__amp__Limousines/Champagne_Limousines.svg#Champagne&Limousines") format("svg");font-weight:normal;font-style:normal;}
+
+/*corpo*/
+body {
+    background-color: rgba(0,0,0,.20);
+}
+
+/*cabeçalho*/
+header#cabecalho {
+}
+header#cabecalho img#texto {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 60%;
+}
+header#cabecalho p#title{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: -33px;
+    margin-left: 100px;
+    font-size: 32pt;
+    font-family: ChampagneLimo;
+    color: #3b859b;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+
+
+/*menu do cabeçalho*/
+nav#menu ul {
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    top:-75px;
+}
+nav#menu li {
+    display: inline-block;
+    background-color: rgba(62,181,183,0.0);
+    padding: 6px;
+    margin: 0px 20px 0px 20px;
+    transition: box-shadow 0.4s, background-color 0.4s;
+    position: relative;
+    left: 166px;
+}
+nav#menu a {
+    text-decoration: none;
+    color: rgba(0,0,0,.60);
+    font-size: 21pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+nav#menu li:hover {
+    box-shadow: 0px 0px 3px;
+    background-color: #3eb5b7;
+}
+nav#menu li:hover a{
+    color: rgb(255,255,255);
+}
+
+
+
+/*Login e cadastro*/
+ul#login_cadastro li {
+    display: inline-block;
+    float:right;
+    left:-35px;
+    position: relative;
+    top: -250px;
+    padding: 5px;
+    margin: 0px 2px 0px 2px;
+    background-color: transparent;
+    transition: background-color 0.4s, box-shadow 0.4s, color 0.3s;
+}
+ul#login_cadastro li#bem_vindo{
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 16pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: rgba(0,0,0,0.70);
+    font-weight: bold;
+    padding: 5px;
+}
+ul#login_cadastro li a {
+    font-size: 16pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: rgba(0,0,0,0.70);
+    font-weight: bold;
+    padding: 5px;
+}
+ul#login_cadastro li:hover{
+    box-shadow: 0px 0px 3px;
+    background-color: #3b859b;
+}
+ul#login_cadastro li:hover a{
+    color: white;
+}
+/*linha de divisão coropo cabeçalho*/
+div#divisao_corpo_cabecalho {
+    border-top: 3px solid #3b859b;
+    width: 91.7%;
+    margin: -50px auto 0px auto;
+}
+/*corpo do site, parte de cima*/
+div#interface {
+    background-color: #e5e4e4;
+    margin: -15px auto 0px auto;
+    box-shadow: 0px 0px 1px black;
+    width: 1100px;
+}
+section#corpo_principal img#banner1 {
+    width: 100%;
+    display: block;
+    position: relative;
+    top:-60px;
+}
+/*rodapé*/
+footer#rodape p {
+    margin: 50px auto 0px auto;
+    text-align: center;
+    border-top: 3px solid #003955;
+    width: 90%;
+    font-family: 'Source Sans Pro';
+    font-size: 14pt;
+    padding: 10px;
+    color: rgba(0,0,0,.9);
+}
+footer#rodape {
+    margin: 0px auto 0px auto;
+    width: 100%;
+    clear: both;
+}

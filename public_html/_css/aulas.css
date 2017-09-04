@@ -1,0 +1,78 @@
+@charset "UTF-8";
+nav#menu a#menu_aulas{
+    color: rgba(0,0,0,.85);
+    transition: color 0.3s;
+}
+nav#menu li:hover a#menu_aulas{
+    color: rgb(255,255,255);
+}
+/*tabela dos vídeos*/
+table#aulas{
+    width: 95%;
+    margin: 0px auto 0px auto;
+    border-spacing: 10px;
+}
+img.aula{
+    width: 100%;
+    border-radius: 20px;
+    color: rgba(0,0,0,.6);
+    box-shadow: 0px 0px 1px;
+    transition: box-shadow 0.5s;
+}
+img.aula:hover{
+    box-shadow: 0px 0px 15px;
+}
+/*H1*/
+div#interface h1{
+    font-family: ChampagneLimo;
+    font-size: 30pt;
+    margin: 0px auto 30px auto;
+    text-align: center;
+    position: relative;
+    top:-3px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    width: 100%;
+    color: white;
+    background-color: #3b859b;
+}
+/*iframe*/
+iframe#video {
+    position: relative;
+    display: block;
+    margin: 0px auto 40px auto;
+    box-shadow: 1px 1px 2px;
+    transition: box-shadow 0.7s;
+}
+iframe#video:hover {
+    box-shadow: 1px 1px 10px;
+}
+/*Tabela dos materiais didáticos*/
+table#material{
+    margin: 0px auto 0px auto;
+}
+div#msg{
+	margin: 0px auto 0x auto;
+	text-align: center;
+}
+span#msg{
+    font-family: ChampagneLimo;
+    font-size: 24pt;
+	font-weight: bold;
+}
+span#msg2{
+    font-family: ChampagneLimo;
+    font-size: 19pt;
+	font-weight: bold;
+}
+#msg a{
+	text-decoration: none;
+	color: #3b859b;
+}
+#msg a:hover{
+	border-bottom: 1.5px solid;
+}
+table#material img{
+	width: 70%;
+	margin-left:20%;
+}
