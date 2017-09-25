@@ -5,78 +5,188 @@
 
 /*corpo*/
 body {
-    background-color: rgba(0,0,0,.20);
+    background-color: #e5e4e4;
 }
 
 /*cabeçalho*/
 header#cabecalho {
 }
 header#cabecalho img#texto {
-    display: block;
+    display: inline-block;
     position: relative;
-    top: 10px;
-    left: 30px;
     width: 60%;
 }
 header#cabecalho p#title{
     width: 100%;
-    display: inline-block;
+    left: 6%;
+    display: block;
     position: relative;
-    top: -33px;
-    margin-left: 100px;
-    font-size: 32pt;
+    font-size: 2.5em;
     font-family: ChampagneLimo;
     color: #3b859b;
     font-weight: bolder;
     letter-spacing: 1px;
+    margin: 0;
+}
+@media only screen and (max-width: 1100px){
+    .sc1100{
+        display: none !important;
+    }
+      div.direita, div.esquerda{
+        width: 100% !important;
+        margin:0 auto !important;
+    }
+    figure.foto{
+        width: 75% !important;
+        height: 75% !important;
+        margin:0 auto;
+        text-align: center;
+    }
+    div#teclado_musical{
+        top:20px !important;
+    }
+    .aula{
+        width: 47%!important;
+    }
 }
 
+#botao_menu{
+    display: none;
+}
+label[for="botao_menu"]{
+    visibility: hidden;
+    position: absolute;
+    padding: 5px;
+    color: #3b859b;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+    border: 2px solid #3b859b;
+    width: 50px;
+    height: 50px;
+}
+label[for="botao_menu"]:hover{
+    background-color: #3b859b;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1000px){
+    .nao_mobile{
+        display: none !important;
+    }
+    label[for="botao_menu"]{
+        visibility: visible;
+        position: relative;
+        display: block;
+        margin-bottom: 20px;
+        padding: 5px;
+        transition: all .5s;
+    }
+    #botao_menu:checked ~ #menu{
+        opacity: 1;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        transition: all .5s;
+        margin-left:0;
+    }
+    #botao_menu:checked ~ #menu li{
+        display: block;
+    }
+    #menu{
+        opacity: 0;
+        margin-left: -200%;
+        position: absolute;
+    }
+    div#form_contato{
+        width:100% !important;
+        display: block;
+        position:relative;
+    }
+    form{
+       width:60% !important;
+    }
+    label, input, textArea, button{
+        font-size: 25pt!important;
+    }
+    div#antoniom{
+        width: 100% !important;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+    #antoniom img#antoniom{
+        width: 30% !important;
+    }
+    .aula{
+        width: 100%!important;
+    }
+    div#interface{
+        width: 100%!important;
+    }
+    nav#menu a{
+        width: 80%!important;
+        font-size: 40pt!important;
+    }
+    ul#login_cadastro li a {
+        font-size: 25pt!important;
+    }
+}
 
 
 /*menu do cabeçalho*/
 nav#menu ul {
+    width: 100%;
     background-color: transparent;
+    text-align: center;
     position: relative;
-    display: inline-block;
-    top:-75px;
+    display: block;
+    right: 4%;
 }
 nav#menu li {
     display: inline-block;
     background-color: rgba(62,181,183,0.0);
     padding: 6px;
     margin: 0px 20px 0px 20px;
-    transition: box-shadow 0.4s, background-color 0.4s;
     position: relative;
-    left: 166px;
+    transition: all 0.4s;
 }
 nav#menu a {
+    display: inline-block;
+    box-sizing: border-box;
     text-decoration: none;
     color: rgba(0,0,0,.60);
     font-size: 21pt;
     font-family: 'Roboto Condensed', sans-serif;
-    padding: 10px;
     font-weight: bolder;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-nav#menu li:hover {
+nav#menu a:hover {
     box-shadow: 0px 0px 3px;
     background-color: #3eb5b7;
 }
-nav#menu li:hover a{
+nav#menu a:hover li{
     color: rgb(255,255,255);
 }
 
 
 
 /*Login e cadastro*/
+#div_login_cadastro{
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    float: right;
+}
 ul#login_cadastro li {
     display: inline-block;
-    float:right;
-    left:-35px;
+    float: right;
     position: relative;
-    top: -250px;
-    padding: 5px;
-    margin: 0px 2px 0px 2px;
+    padding: 2%;
+    margin: 0px 1% 0px 1%;
     background-color: transparent;
     transition: background-color 0.4s, box-shadow 0.4s, color 0.3s;
 }
@@ -88,7 +198,7 @@ ul#login_cadastro li#bem_vindo{
     text-decoration: none;
     color: rgba(0,0,0,0.70);
     font-weight: bold;
-    padding: 5px;
+    padding: 2%;
 }
 ul#login_cadastro li a {
     font-size: 16pt;
@@ -105,24 +215,17 @@ ul#login_cadastro li:hover{
 ul#login_cadastro li:hover a{
     color: white;
 }
-/*linha de divisão coropo cabeçalho*/
-div#divisao_corpo_cabecalho {
-    border-top: 3px solid #3b859b;
-    width: 91.7%;
-    margin: -50px auto 0px auto;
-}
+
 /*corpo do site, parte de cima*/
 div#interface {
-    background-color: #e5e4e4;
     margin: -15px auto 0px auto;
-    box-shadow: 0px 0px 1px black;
-    width: 1100px;
+    width: 80%;
 }
 section#corpo_principal img#banner1 {
     width: 100%;
     display: block;
     position: relative;
-    top:-60px;
+    margin-bottom: 5%;
 }
 /*rodapé*/
 footer#rodape p {
@@ -139,4 +242,17 @@ footer#rodape {
     margin: 0px auto 0px auto;
     width: 100%;
     clear: both;
+}
+/*Iframe video*/
+iframe#video {
+    width: 90%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 2px;
+    transition: box-shadow 0.7s;
+}
+iframe#video:hover {
+    box-shadow: 1px 1px 10px;
 }

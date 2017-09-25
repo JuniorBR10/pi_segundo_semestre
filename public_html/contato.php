@@ -31,10 +31,10 @@
 			</form>
 			
 		</div>
-		<aside id="antoniom">
+                <div id="antoniom">
 			<img src="_projeto_galeria/Antonio-mjr.jpg" id="antoniom">
 			<img src="_projeto_galeria/antoniomarcos.png" id="texto_antonio">
 			<p class="descricao_antonio">Olá, tudo bem? Caso você tenha alguma dúvida, sugestão ou simplesmente queira falar comigo, sinta-se à vontade para me enviar uma mensagem.</p><p class="descricao_antonio"> Basta preencher o formulário a esquerda e clicar em enviar, a mensagem será respondida no e-mail que você preencheu.</p>
-		</aside>
+                </div>
 		<?php } ?>
 	</section>

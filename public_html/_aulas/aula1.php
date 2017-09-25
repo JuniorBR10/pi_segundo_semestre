@@ -1,7 +1,7 @@
 <div id="divisao_corpo_cabecalho"></div>
 	<section id="corpo_principal">
 		<h1>Aula 1 - Introdução ao piano</h1>
-		<iframe id="video" width="853" height="480" src="https://www.youtube.com/embed/nTUuKV8MCm4" frameborder="0" allowfullscreen></iframe>
+		<iframe id="video" width="820" height="520" src="https://www.youtube.com/embed/nTUuKV8MCm4" frameborder="0" allowfullscreen></iframe>
 		<h1>Material didático</h1>
 		<?php if($GLOBALS['logado'] == true) { ?>
 		<table id="material">

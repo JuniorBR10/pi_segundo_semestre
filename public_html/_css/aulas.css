@@ -7,19 +7,22 @@ nav#menu li:hover a#menu_aulas{
     color: rgb(255,255,255);
 }
 /*tabela dos vídeos*/
-table#aulas{
-    width: 95%;
+div#aulas{
+    width: 100%;
+    position: relative;
     margin: 0px auto 0px auto;
     border-spacing: 10px;
 }
-img.aula{
-    width: 100%;
+.aula{
+    width: 31%;
+    margin: 1%;
     border-radius: 20px;
     color: rgba(0,0,0,.6);
     box-shadow: 0px 0px 1px;
     transition: box-shadow 0.5s;
+    text-align: center;
 }
-img.aula:hover{
+.aula:hover{
     box-shadow: 0px 0px 15px;
 }
 /*H1*/
@@ -38,14 +41,7 @@ div#interface h1{
 }
 /*iframe*/
 iframe#video {
-    position: relative;
-    display: block;
     margin: 0px auto 40px auto;
-    box-shadow: 1px 1px 2px;
-    transition: box-shadow 0.7s;
-}
-iframe#video:hover {
-    box-shadow: 1px 1px 10px;
 }
 /*Tabela dos materiais didáticos*/
 table#material{

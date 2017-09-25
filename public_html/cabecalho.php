@@ -12,19 +12,19 @@
         <meta name="google-site-verification" content="ngxnJh_EW4seX2G1KpYw_cMBOeBepehMSBiz-2uaQlE" >
         <link rel="stylesheet" type="text/css" href="_css/principal.css">
         <link rel="stylesheet" type="text/css" href="_css/<?=$css?>">
+        <script src="_js/biblioteca.js" type="text/javascript"></script>
         
     </head>
-    <body>
+    <body onload="arruma_video()" onresize="arruma_video()">
     <div id="interface">
         
         <header id="cabecalho">
             <img id="texto" src="_projeto_galeria/logo-pronto.png">
-            <p id="title">uma maneira diferente para aprender a tocar</p>
-            
+            <div id="div_login_cadastro">
             <?php if($GLOBALS['logado'] == true) { ?>
             <ul id="login_cadastro">
                 <li id="sair" ><a href="logout.php">Sair</a></li> 
-                <li id="bem_vindo">Bem vindo <?=$nome ?> &nbsp;&nbsp;&nbsp;|</li> 
+                <li id="bem_vindo" class="sc1100">Bem vindo <?=$nome ?> &nbsp;&nbsp;&nbsp;|</li> 
             </ul>
             <?php } else { ?>
             <ul id="login_cadastro">
@@ -33,13 +33,17 @@
             </ul>
             
             <?php } ?>
-        
+            </div>
+            <p class="nao_mobile" id="title">uma maneira diferente para aprender a tocar</p>
+            
+            <input type="checkbox" id="botao_menu">
+            <label onselectstart="return false" for="botao_menu">&#9776;</label>
             <nav id="menu">
             <ul>
-                <li><a id="menu_inicio" href="index.php?p=home">Início</a></li>
-                <li><a id="menu_aulas" href="index.php?p=aulas">Aulas</a></li>
-                <li><a id="menu_instrumento" href="index.php?p=instrumento">O Instrumento</a></li>
-                <li><a id="menu_contato" href="index.php?p=contato">Contato</a></li>
+                <a id="menu_inicio" href="index.php?p=home"><li>Início</li></a>
+                <a id="menu_aulas" href="index.php?p=aulas"><li>Aulas</li></a>               
+                <a id="menu_instrumento" href="index.php?p=instrumento"><li>O Instrumento</li></a>
+                <a id="menu_contato" href="index.php?p=contato"><li>Contato</li></a>
             </ul>
             </nav>
         </header>
