@@ -1,5 +1,4 @@
 <?php
-	$pagina_atual = "home";
 	if(isset($_GET['p'])){
 		$pagina_atual = $_GET['p'];
 	}
@@ -39,6 +38,9 @@
 			"css" => "aulas.css"
 		)
 	);
+        if(!isset($p[$pagina_atual])){
+            $pagina_atual = "home";
+        }
 	$css = $p[$pagina_atual]["css"];
 	$url = $p[$pagina_atual]["url"];
 	

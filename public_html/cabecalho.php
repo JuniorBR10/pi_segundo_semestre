@@ -2,6 +2,12 @@
     @include "valida_login.php";
 	$msg = 0;
     @$msg = $_GET['msg'];
+    if($pagina_atual == "home" || (strstr($pagina_atual,"aula")) != false && $pagina_atual != "aulas"){
+        $atributes_body = "onload='arruma_video()' onresize='arruma_video()'";
+    }
+    else{
+        $atributes_body = "";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,7 +21,7 @@
         <script src="_js/biblioteca.js" type="text/javascript"></script>
         
     </head>
-    <body onload="arruma_video()" onresize="arruma_video()">
+    <body <?=$atributes_body?>>
     <div id="interface">
         
         <header id="cabecalho">
