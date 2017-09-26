@@ -2,5 +2,5 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header("location:index.php?=home");
+header("location:index.php?p=home");
 ?>

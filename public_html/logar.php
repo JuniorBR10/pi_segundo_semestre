@@ -28,7 +28,7 @@ elseif($usuario[$user."_senha"] == $senha){
     $_SESSION['nome_user'] = $user;
     $_SESSION['senha_user'] = $senha;
     $_SESSION['nome'] = $usuario[$user."_nome"];
-    header("location:index.php?=home");
+    header("location:index.php?p=home");
     die();
 }
 ?>
