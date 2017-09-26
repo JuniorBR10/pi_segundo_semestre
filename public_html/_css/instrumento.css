@@ -10,7 +10,7 @@ nav#menu li:hover a#menu_instrumento{
 div#interface h1{
     font-family: ChampagneLimo;
     font-size: 30pt;
-    margin: 0px auto 15px auto;
+    margin: 0 auto;
     text-align: center;
     position: relative;
     top:-3px;
@@ -19,6 +19,7 @@ div#interface h1{
     width: 100%;
     color: white;
     background-color: #3b859b;
+    display:block;
 }
 div.titulos{
     width: 100%;
@@ -26,7 +27,6 @@ div.titulos{
 /*Corpo Principal*/
 div.paragrafos{
     width: 100%;
-    position: relative;
 }
 div.paragrafos p.texto{
     font-size: 14pt;
@@ -36,8 +36,7 @@ div.paragrafos p.texto{
     text-align: justify;
 }
 div#primeiro_texto{
-    position: relative;
-    top:-20px;
+
 }
 div.imagem_direita {
     width: 100%;
@@ -63,29 +62,27 @@ p.descricao_fotos{
     text-shadow:1px 1px 2px black, 1px 0px 0px black,-1px 0px 0px black, 0px 1px 0px black, 0px -1px 0px black;
 }
 div.direita{
-    width: 45%;
+    width: 50%;
     position: relative;
-    display:inline-block;
-    margin-left:3.25%;
+    display:block;
+    margin: 0 auto;
 }
 div.esquerda{
     position: relative;
-    display:inline-block; 
-    width: 45%;
-    margin-left:3.25%;
+    display:block; 
+    width: 50%;
+    margin: 0 auto;
 }
 /*Teclado*/
 div#teclado_musical{
-	top:-55px;
+
 }
 div#texto_teclado{
 	position:relative;
-	top:-5px;
 }
 /*pedais*/
 div#texto_pedais{
 	position:relative;
-	top:-40px;
 }
 /*Efito de escurecer*/
 figure.foto {
