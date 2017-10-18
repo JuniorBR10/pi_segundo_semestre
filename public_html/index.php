@@ -1,7 +1,10 @@
 <?php
 	if(isset($_GET['p'])){
-		$pagina_atual = $_GET['p'];
+            $pagina_atual = $_GET['p'];
 	}
+        else{
+            $pagina_atual = "home";
+        }
 	$p = array(
 		"home" => array(
 			"menu" => "Início",

@@ -12,8 +12,8 @@
 		</table>
 		<?php } else { ?>
 		<div id="msg">
-			<span id="msg">Faça <a href="index.php?p=login">login</a> para ter acesso ao material didático!</span><br><br>
-			<span id="msg2">Não possui uma conta? <a href="index.php?p=cadastro">Clique aqui</a> para realizar o cadastro.</span>
+			<span id="msg">Faça <a href="index.php?p=login&pagina_anterior=<?=$pagina_atual?>">login</a> para ter acesso ao material didático!</span><br><br>
+			<span id="msg2">Não possui uma conta? <a href="index.php?p=cadastro&pagina_anterior=<?=$pagina_atual?>">Clique aqui</a> para realizar o cadastro.</span>
 		</div>
 		<?php } ?>
 	</section>

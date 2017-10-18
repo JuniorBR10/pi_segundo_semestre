@@ -13,21 +13,24 @@
 		<div id="form_contato">
 			<?php switch ($msg) {
 				case "nome_invalido":
-					echo "<span id='erro'>Nome é obrigatório!</span>";
-					break;
+                                    $erro_nome = "Nome é obrigatório!";
+                                    $class_nome = "input_erro";
+                                break;
 				case "email_invalido":
-					echo "<span id='erro'>E-mail Inválido!</span>";
-					break;
+                                    $erro_email = "E-mail Inválido!";
+                                    $class_email = "input_erro";
+                                break;
 				case "msg_invalido":
-					echo "<span id='erro'>Mensagem Vazia!</span>";
-					break;
+                                    $erro_msg = "Mensagem Vazia!";
+                                    $class_msg = "input_erro";
+                                break;
 			}
 			?>
 			<form action="envia_email.php" method="post">
-				<label>Nome <br><input id="nome" type="text" required name="name" placeholder="Seu nome "></label><br>
-				<label>E-mail <br><input id="email" type="email" required name="email" placeholder="Endereço de e-mail válido"></label><br>
-				<label>Mensagem <br><textarea id="textao" name="mensagem" required placeholder="Aqui vai sua mensagem "></textarea></label>
-				<button type="submit">Enviar</button>
+                            <label>Nome <br><span class="span_erro"><?=@$erro_nome?></span><input class="<?=@$class_nome?>" id="nome" type="text" required name="name" placeholder="Seu nome "></label><br>
+                            <label>E-mail <br><span class="span_erro"><?=@$erro_email?></span><input class="<?=@$class_email?>" id="email" type="email" required name="email" placeholder="Endereço de e-mail válido"></label><br>
+                            <label>Mensagem <br><span class="span_erro"><?=@$erro_msg?></span><textarea class="<?=@$class_msg?>" id="textao" name="mensagem" required placeholder="Aqui vai sua mensagem "></textarea></label>
+                            <button type="submit">Enviar</button>
 			</form>
 			
 		</div>

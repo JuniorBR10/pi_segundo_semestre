@@ -29,13 +29,13 @@
             <div id="div_login_cadastro">
             <?php if($GLOBALS['logado'] == true) { ?>
             <ul id="login_cadastro">
-                <li id="sair" ><a href="logout.php">Sair</a></li> 
+                <li id="sair" ><a href="logout.php?pagina_anterior=<?=$pagina_atual?>">Sair</a></li> 
                 <li id="bem_vindo" class="sc1100">Bem vindo <?=$nome ?> &nbsp;&nbsp;&nbsp;|</li> 
             </ul>
             <?php } else { ?>
             <ul id="login_cadastro">
-                <li id="cadastro"><a href="index.php?p=cadastro">Cadastre-se</a></li>
-                <li id="login" ><a href="index.php?p=login">Login</a></li>  
+                <li id="cadastro"><a href="index.php?p=cadastro&pagina_anterior=<?=$pagina_atual?>">Cadastre-se</a></li>
+                <li id="login" ><a href="index.php?p=login&pagina_anterior=<?=$pagina_atual?>">Login</a></li>  
             </ul>
             
             <?php } ?>

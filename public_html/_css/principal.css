@@ -5,7 +5,7 @@
 
 /*corpo*/
 body {
-    background-color: #e5e4e4;
+
 }
 
 /*cabeçalho*/
@@ -29,18 +29,17 @@ header#cabecalho p#title{
     margin: 0;
 }
 @media only screen and (max-width: 1350px){
-      div.direita, div.esquerda{
-        width: 60% !important;
-        margin:0 auto !important;
-    }
     .aula{
         width: 47%!important;
     }
 }
-@media only screen and (max-width: 1200px){
-      div.direita, div.esquerda{
-        width: 70% !important;
-        margin:0 auto !important;
+@media only screen and (min-width: 1100px){
+    div#interface{
+        width: 1100px !important;
+    }
+    div#form_contato{
+        position: relative !important;
+        top: -35px !important;
     }
 }
 @media only screen and (max-width: 1100px){
@@ -59,6 +58,9 @@ header#cabecalho p#title{
     }
     div#teclado_musical{
         top:20px !important;
+    }
+    .aula{
+        width: 47%!important;
     }
 }
 
@@ -268,3 +270,10 @@ iframe#video {
 iframe#video:hover {
     box-shadow: 1px 1px 10px;
 }
+.input_erro{
+    border: 2px solid red;
+}
+.span_erro{
+    color:red;
+}
+

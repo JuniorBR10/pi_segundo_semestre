@@ -1,34 +1,38 @@
 <?php
 /*pegar as variaveis que o usuário digitou*/
-$user = $_POST['nome_user'];
-$senha = $_POST['senha_user'];
-
-/*incluir o arquivo que contem os usuarios cadastrados, suas respectivas senhas e seus nomes*/
-include "../logins.php";
+$login = filter_input(INPUT_POST,'nome_user');
+$senha = filter_input(INPUT_POST,'senha_user');
+$senhamd5 = md5($senha);
+$pagina_anterior = filter_input(INPUT_GET, 'pagina_anterior');
+//query para o banco
+include 'conecta_mysql.php';
+$busca = mysqli_query($con, "SELECT login, senha, nome FROM pessoa WHERE login = '{$login}'");
+$linha_usuario = mysqli_num_rows($busca);
+$dado = mysqli_fetch_array($busca);
 /*verificar as informações*/
-if($usuario[$user."_senha"] == ""){
-    header("location:index.php?p=login&msg=user_noexiste");
+if($linha_usuario == 0){
+    header("location:index.php?p=login&msg=user_noexiste&pagina_anterior=$pagina_anterior");
     die();
 }
-elseif(empty($user) || strstr($user, " ")){
-    header("location:index.php?p=login&msg=user_vazio");
+elseif(empty($login) || strstr($login, " ")){
+    header("location:index.php?p=login&msg=user_vazio&pagina_anterior=$pagina_anterior");
     die();     
 }
 elseif(empty ($senha) || strstr($senha, " ")) {
-    header("location:index.php?p=login&msg=senha_invalido");
+    header("location:index.php?p=login&msg=senha_invalido&pagina_anterior=$pagina_anterior&login=$login");
     die();
 }    
-elseif($usuario[$user."_senha"] != $senha){
-    header("location:index.php?p=login&msg=senha_incorreta");
+elseif($senhamd5 != $dado['senha']){
+    header("location:index.php?p=login&msg=senha_incorreta&pagina_anterior=$pagina_anterior&login=$login");
     die();
 }
-elseif($usuario[$user."_senha"] == $senha){
+else{
     /*se tudo estiver ok, criar a sessão e os cookies usuario,senha e nome*/
     session_start();
-    $_SESSION['nome_user'] = $user;
-    $_SESSION['senha_user'] = $senha;
-    $_SESSION['nome'] = $usuario[$user."_nome"];
-    header("location:index.php?p=home");
+    $_SESSION['nome_user'] = $login;
+    $_SESSION['senha_user'] = $senhamd5;
+    $_SESSION['nome'] = $dado['nome'];
+    header("location:index.php?p=$pagina_anterior");
     die();
 }
 ?>
