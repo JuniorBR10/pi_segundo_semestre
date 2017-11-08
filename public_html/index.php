@@ -21,6 +21,11 @@
 			"url" => "instrumento.php",
 			"css" => "instrumento.css"
 		),
+                "ouvido" => array(
+			"menu" => "Treine Seu Ouvido",
+			"url" => "ouvido.php",
+			"css" => "ouvido.css"
+		),
 		"contato" => array(
 			"menu" => "Contato",
 			"url" => "contato.php",

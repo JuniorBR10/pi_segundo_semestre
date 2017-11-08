@@ -47,7 +47,8 @@
             <nav id="menu">
             <ul>
                 <a id="menu_inicio" href="index.php?p=home"><li>Início</li></a>
-                <a id="menu_aulas" href="index.php?p=aulas"><li>Aulas</li></a>               
+                <a id="menu_aulas" href="index.php?p=aulas"><li>Aulas</li></a>
+                <a id="menu_ouvido" href="index.php?p=ouvido"><li>Treine Seu Ouvido</li></a>
                 <a id="menu_instrumento" href="index.php?p=instrumento"><li>O Instrumento</li></a>
                 <a id="menu_contato" href="index.php?p=contato"><li>Contato</li></a>
             </ul>

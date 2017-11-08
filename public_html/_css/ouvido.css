@@ -1,0 +1,101 @@
+@charset "UTF-8";
+nav#menu a#menu_ouvido{
+    color: rgba(0,0,0,.85);
+    transition: color 0.3s;
+}
+nav#menu li:hover a#menu_ouvido{
+    color: rgb(255,255,255);
+}
+#principal_ouvido{
+    width: 100%;
+}
+.nota_musical{
+    width:122px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #36b5b7;
+    color: #36b5b7;
+    transition: all 0.3s;
+}
+.nota_musical:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #36b5b7;
+}
+.nota_musical p{
+    font-family: 'Roboto Condensed';
+    font-size: 30pt;
+    margin: 20% auto;
+    text-align: center;
+}
+/*H's*/
+div#interface h1{
+    font-family: ChampagneLimo;
+    font-size: 30pt;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    position: relative;
+    top:-3px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    width: 100%;
+    color: white;
+    background-color: #3b859b;
+}
+#botoes{
+    text-align: center;
+}
+button{
+    width: 20%;
+    margin:2% auto 0 auto;
+    padding: 10px;
+    display: inline-block;
+    font-size: 15pt;
+    font-family: 'Roboto Condensed';
+    color: white;
+    background-color: #3b859b;
+    border: none;
+    transition: background-color 0.5s;
+}
+button:hover{
+    background-color: #3eb5b7;
+    cursor: pointer;
+}
+#ouvir_novamente{
+    background-color: #e4ab03;
+    color: black;
+}
+#ouvir_novamente:hover{
+    background-color: #ffbf00;
+    cursor: pointer  
+}
+#texto_audio{
+    font-size: 30pt;
+    font-family: 'Roboto Condensed';
+    width: 100%;
+    text-align: center;
+}
+div#msg{
+	margin: 0px auto 0x auto;
+	text-align: center;
+}
+span#msg{
+    font-family: ChampagneLimo;
+    font-size: 24pt;
+	font-weight: bold;
+}
+span#msg2{
+    font-family: ChampagneLimo;
+    font-size: 19pt;
+	font-weight: bold;
+}
+#msg a{
+	text-decoration: none;
+	color: #3b859b;
+}
+#msg a:hover{
+	border-bottom: 1.5px solid;
+}
