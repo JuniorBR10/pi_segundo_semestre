@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="_css/principal.css">
         <link rel="stylesheet" type="text/css" href="_css/<?=$css?>">
         <script src="_js/biblioteca.js" type="text/javascript"></script>
-        
+        <link rel="shortcut icon" type="image/png" href="_projeto_galeria/piano-redi.png"/>
     </head>
     <body <?=$atributes_body?>>
     <div id="interface">
