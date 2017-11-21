@@ -29,13 +29,21 @@
             <div id="div_login_cadastro">
             <?php if($GLOBALS['logado'] == true) { ?>
             <ul id="login_cadastro">
-                <li id="sair" ><a href="logout.php?pagina_anterior=<?=$pagina_atual?>">Sair</a></li> 
-                <li id="bem_vindo" class="sc1100">Bem vindo <?=$nome ?> &nbsp;&nbsp;&nbsp;|</li> 
+                <li id="sair" >
+                    <a href="logout.php?pagina_anterior=<?=$pagina_atual?>">Sair</a>
+                </li> 
+                <li id="bem_vindo" class="sc1100">
+                    Bem vindo <?=$nome ?> &nbsp;&nbsp;&nbsp;|
+                </li> 
             </ul>
             <?php } else { ?>
             <ul id="login_cadastro">
-                <li id="cadastro"><a href="index.php?p=cadastro&pagina_anterior=<?=$pagina_atual?>">Cadastre-se</a></li>
-                <li id="login" ><a href="index.php?p=login&pagina_anterior=<?=$pagina_atual?>">Login</a></li>  
+                <li id="cadastro">
+                    <a href="index.php?p=cadastro&pagina_anterior=<?=$pagina_atual?>">Cadastre-se</a>
+                </li>
+                <li id="login" >
+                    <a href="index.php?p=login&pagina_anterior=<?=$pagina_atual?>">Login</a>
+                </li>  
             </ul>
             
             <?php } ?>
@@ -45,12 +53,22 @@
             <input type="checkbox" id="botao_menu">
             <label onselectstart="return false" for="botao_menu">&#9776;</label>
             <nav id="menu">
-            <ul>
-                <a id="menu_inicio" href="index.php?p=home"><li>Início</li></a>
-                <a id="menu_aulas" href="index.php?p=aulas"><li>Aulas</li></a>
-                <a id="menu_ouvido" href="index.php?p=ouvido"><li>Treine Seu Ouvido</li></a>
-                <a id="menu_instrumento" href="index.php?p=instrumento"><li>O Instrumento</li></a>
-                <a id="menu_contato" href="index.php?p=contato"><li>Contato</li></a>
-            </ul>
+                <ul>
+                    <a id="menu_inicio" href="index.php?p=home">
+                        <li>Início</li>
+                    </a>
+                    <a id="menu_aulas" href="index.php?p=aulas">
+                        <li>Aulas</li>
+                    </a>
+                    <a id="menu_ouvido" href="index.php?p=ouvido">
+                        <li>Treine Seu Ouvido</li>
+                    </a>
+                    <a id="menu_instrumento" href="index.php?p=instrumento">
+                        <li>O Instrumento</li>
+                    </a>
+                    <a id="menu_contato" href="index.php?p=contato">
+                        <li>Contato</li>
+                    </a>
+                </ul>
             </nav>
         </header>

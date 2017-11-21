@@ -7,41 +7,46 @@
     $senha = filter_input(INPUT_POST, 'senha');
     $confirma_senha = filter_input(INPUT_POST, 'confirma_senha');
     $pagina_anterior = filter_input(INPUT_GET, 'pagina_anterior');
-    //query para o banco
-    include "conecta_mysql.php";
-    $busca_usuario = mysqli_query($con, "SELECT * FROM pessoa WHERE login = '{$login}'");
-    $linha_usuario = mysqli_num_rows($busca_usuario);
-    $busca_email = mysqli_query($con, "SELECT * FROM pessoa WHERE email = '{$email}'");
-    $linha_email = mysqli_num_rows($busca_email);
     
-    //verificar as variaveis que o usuario digitou
-    if(empty($login) || strstr($login, " ")){
+    //verificar a variavel de login
+    if(empty($login) || strstr($login, " ") || strlen($login) > 30){
         header("location:index.php?p=cadastro&msg=usuario_vazio&pagina_anterior=$pagina_anterior"
         . "&nome=$nome&email=$email&sexo=$sexo");
         die();     
     }
-    elseif($linha_usuario != 0){
+    
+    //query para o banco
+    include "conecta_mysql.php";
+    $busca_usuario = mysqli_query($con, "SELECT * FROM pessoa WHERE login = '{$login}'");
+    $linha_usuario = mysqli_num_rows($busca_usuario);
+    //verificar se a variavel de login não exite no banco
+    if($linha_usuario != 0){
         header("location:index.php?p=cadastro&msg=usuario_existe&pagina_anterior=$pagina_anterior"
         . "&nome=$nome&email=$email&sexo=$sexo");
         die();
     }
-    elseif(empty($nome)){
-        header("location:index.php?p=cadastro&msg=nome_vazio&pagina_anterior=$pagina_anterior"
-        . "&login=$login&email=$email&sexo=$sexo");
-        die();
-    }
-    elseif(strlen($email) < 6 || substr_count($email, "@") != 1 || substr_count($email, ".") == 0) {
-        header("location:index.php?p=cadastro&msg=email_invalido&pagina_anterior=$pagina_anterior"
-        . "&nome=$nome&login=$login&sexo=$sexo");
-        die();
-    }
-    elseif($linha_email != 0){
+    //query para o banco
+    $busca_email = mysqli_query($con, "SELECT * FROM pessoa WHERE email = '{$email}'");
+    $linha_email = mysqli_num_rows($busca_email);
+    //verificar se a variavel de email não exite no banco
+    if($linha_email != 0){
         header("location:index.php?p=cadastro&msg=email_existe&pagina_anterior=$pagina_anterior"
         . "&nome=$nome&login=$login&sexo=$sexo");
         die();
     }
+    
+    //verificar as variaveis que o usuario digitou
+    if(empty($nome) || strlen($nome) > 100 ){
+        header("location:index.php?p=cadastro&msg=nome_vazio&pagina_anterior=$pagina_anterior"
+        . "&login=$login&email=$email&sexo=$sexo");
+        die();
+    }
+    elseif(strlen($email) < 6 || strlen($email) > 150 || substr_count($email, "@") != 1 || substr_count($email, ".") == 0) {
+        header("location:index.php?p=cadastro&msg=email_invalido&pagina_anterior=$pagina_anterior"
+        . "&nome=$nome&login=$login&sexo=$sexo");
+        die();
+    }
     elseif($sexo != "1" && $sexo != "0"){
-        var_dump($sexo);die();
         header("location:index.php?p=cadastro&msg=sexo_invalido&pagina_anterior=$pagina_anterior"
         . "&nome=$nome&login=$login&email=$email");
         die();
